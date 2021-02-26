@@ -1,8 +1,11 @@
 <?php
-require_once './Helpers/Curl/Curl.php';
-use curl;
 
-$k= new curl('https://vnexpress.net/');
-var_dump( $k::$html);
+ini_set('display_startup_errors', 1);
+ini_set('display_errors', 1);
+error_reporting(-1);
+
+require_once './Autoload/autoload.php';
+ use Route;
+  Route::routeToController();
 
 ?>
