@@ -3,7 +3,7 @@ class VNexpressParser extends Parser{
     public $att=[
         'titleRegex'=>'/<h1.*class=\"title\-detail\">(.*)<\/h1>/',
         'dateRegex'=> '/<span.*class=\"date\">(.*)<\/span>/',
-        'contentRegex'=>'/<article.*fck_detail \">(.*)article>/s'
+        'contentRegex'=>'/<article.*fck_detail \">(.*)<\/article>/s'
     ];
 
     function __construct($url)

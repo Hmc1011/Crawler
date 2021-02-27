@@ -8,6 +8,10 @@
     <title>Crawler Utility Library</title>
 </head>
 <body>    
+    <h1>
+        <a href="/">Home</a> <br>
+        <a href="/show">Show all article </a>
+    </h1>
     <form action="">
         <div class="form-group">
           <label for=""> URL: </label>

@@ -11,31 +11,34 @@
 </head>
 <body>
 
+<h1>
+        <a href="/">Home</a> <br>
+  </h1>
 
-<p>
 
     <?php
+    
     foreach (ShowController::$allArticle as $item)
     {
     ?>
-
+  <p>
   <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample<?php echo $item['id'] ?>" role="button" aria-expanded="false" aria-controls="collapseExample">
     <?php echo $item['title'] ?>
   </a>
+  </p>
  
-</p>
 <div class="collapse" id="collapseExample<?php echo $item['id'] ?>">
   <div class="card card-body">
   <?php
     echo "<b>".$item['date']."</b><br>";
     echo $item['content'];
-
+  
   ?>
   </div>
 </div>
 
  <?php
-    }
+    }  
  ?>
 </body>
 </html>

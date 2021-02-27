@@ -1,5 +1,5 @@
 <?php
-class DB
+class Article
 {
     private $conn;
     function __construct($servername, $username, $password, $dbname)
