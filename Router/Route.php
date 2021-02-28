@@ -9,7 +9,7 @@ class Route {
        else $controller= ucfirst(preg_replace('/^\//','',$path));
 
            $classController = $controller.'Controller';
-           require_once './MVC/Controllers/'.$classController.'.php';
+           require_once './App/Controllers/'.$classController.'.php';
            (new $classController )->doAction();
 
     }

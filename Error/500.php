@@ -1,1 +1,0 @@
-<h1> <a href="./">500 ERROR GO HOME</a> </h1>

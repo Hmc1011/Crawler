@@ -1,0 +1,15 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "files": [ "Router/Route.php","App/Helpers/Curl/Curl.php",
+            "App/Controllers/IndexController.php",
+            "App/Helpers/Parser/Base/Parser.php",
+            "App/Helpers/Parser/DanTriParser.php",
+            "App/Helpers/Parser/VietNamNetParser.php",
+            "App/Helpers/Parser/VNexpressParser.php",
+            "App/Models/Article.php"
+        ]
+    }
+}
