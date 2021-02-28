@@ -1,4 +1,8 @@
 <?php
+/*
+Here,this class will set attributes which is regex strings 
+and construct method will extract to variables for the Parser
+*/
 class DantriParser extends Parser{
     public $att=[
         'titleRegex'=>'/<h1 class=\"dt-news__title\">(.*)<\/h1>/s',

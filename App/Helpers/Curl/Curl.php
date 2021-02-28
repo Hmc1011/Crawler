@@ -8,7 +8,8 @@ class Curl{
     {
             $this->url = $url;
     }
-    
+//Here,curl will get the Html from given url
+  
     public function getHtml()
     {
         $curl = curl_init();

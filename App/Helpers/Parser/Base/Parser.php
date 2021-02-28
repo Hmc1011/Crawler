@@ -1,4 +1,9 @@
+
 <?php
+/*
+Parser is base class that can get data with regexs and the content by below functions
+*/
+
 class Parser{
     protected $content,$titleRegex,$dateRegex,$contentRegex;
     public function getTitle(){

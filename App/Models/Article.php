@@ -1,4 +1,7 @@
 <?php
+/*
+Table Article contains all the stored articles
+*/
 class Article
 {
     private $conn;

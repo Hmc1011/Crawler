@@ -1,18 +1,14 @@
 <?php
-/*
-Here i 
-
-*/
-
 class IndexController
 {
 
     public static $title, $content, $date, $url;
-    public static $domainToClass = [
+    public static $domainToClass = [ 
         'vnexpress.net' => 'VNexpressParser',
         'dantri.com.vn'=>'DanTriParser',
         'vietnamnet.vn'=>'VietNamNetParser'
     ];
+//setData will store data to database and pass value for view Index
 
     private function setData()
     {

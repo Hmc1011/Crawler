@@ -1,4 +1,7 @@
 <?php
+/*
+Here, data is stored in static var $allArticle to pass to view Show
+*/
 
 class ShowController
 { 
