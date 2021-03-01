@@ -4,7 +4,7 @@ Table Article contains all the stored articles
 */
 class Article
 {
-    private $conn;
+    private $conn;    
     function __construct($servername, $username, $password, $dbname)
     {
 

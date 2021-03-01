@@ -7,7 +7,7 @@ class IndexController
         'vnexpress.net' => 'VNexpressParser',
         'dantri.com.vn'=>'DanTriParser',
         'vietnamnet.vn'=>'VietNamNetParser'
-    ];
+    ]; //Each domain has a corresponding class to retrieve data
 //setData will store data to database and pass value for view Index
 
     private function setData()

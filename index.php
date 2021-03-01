@@ -15,6 +15,6 @@ require_once  './vendor/autoload.php' ;
 
 $dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__);
 $dotenv->load();
-  Route::routeToController();
+  Route::routeToController(); //the request will go from the route to the controller
   
 ?>

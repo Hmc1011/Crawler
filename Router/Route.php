@@ -9,8 +9,10 @@ class Route {
        else $controller= ucfirst(preg_replace('/^\//','',$path));
         
            $classController = $controller.'Controller';
+           //here i call corresponding controller from route
            require_once './App/Controllers/'.$classController.'.php';
            (new $classController )->doAction();
+
 
     }
 

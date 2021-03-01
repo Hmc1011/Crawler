@@ -12,7 +12,8 @@ class VNexpressParser extends Parser{
 
     function __construct($url)
     {
-        $this->content= (new Curl\Curl($url))->getHtml() ;
+        //get the Html content of given url
+        $this->content= (new Curl\Curl($url))->getHtml() ; 
         foreach ($this->att as $key=>$value )
             $this->{$key}=$value;
     }
