@@ -17,4 +17,5 @@ return array(
     'bb199b382aa28ac460a1d851a2a06fd7' => $baseDir . '/App/Helpers/Parser/VietNamNetParser.php',
     '73378c40ea2bb055366ec88133975a89' => $baseDir . '/App/Helpers/Parser/VNexpressParser.php',
     '615e2a9989b2f7d7c06c14eee8104b43' => $baseDir . '/App/Models/Article.php',
+    '640e153a810432a508d44b8301d26b42' => $baseDir . '/App/Helpers/Parser/ParserFactory.php',
 );

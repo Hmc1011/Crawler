@@ -18,6 +18,7 @@ class ComposerStaticInit94f962281c3c931eab6cdc06851bcce9
         'bb199b382aa28ac460a1d851a2a06fd7' => __DIR__ . '/../..' . '/App/Helpers/Parser/VietNamNetParser.php',
         '73378c40ea2bb055366ec88133975a89' => __DIR__ . '/../..' . '/App/Helpers/Parser/VNexpressParser.php',
         '615e2a9989b2f7d7c06c14eee8104b43' => __DIR__ . '/../..' . '/App/Models/Article.php',
+        '640e153a810432a508d44b8301d26b42' => __DIR__ . '/../..' . '/App/Helpers/Parser/ParserFactory.php',
     );
 
     public static $prefixLengthsPsr4 = array (

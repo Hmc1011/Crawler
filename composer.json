@@ -9,7 +9,8 @@
             "App/Helpers/Parser/DanTriParser.php",
             "App/Helpers/Parser/VietNamNetParser.php",
             "App/Helpers/Parser/VNexpressParser.php",
-            "App/Models/Article.php"
+            "App/Models/Article.php",
+            "App/Helpers/Parser/ParserFactory.php"
         ]
     }
 }

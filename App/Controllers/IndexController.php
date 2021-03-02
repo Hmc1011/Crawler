@@ -19,7 +19,7 @@ class IndexController
 
             $this::$url = $url;
             $domain = trim(parse_url($url, PHP_URL_HOST));
-            $data = new $this::$domainToClass[$domain]($url);
+            $data = ParserFactory::getParserInstance($domain,$url);
             $this::$title = $data->getTitle();
             $this::$content = $data->getContent();
             $this::$date = $data->getDate();
