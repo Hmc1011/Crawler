@@ -10,7 +10,8 @@
             "App/Helpers/Parser/VietNamNetParser.php",
             "App/Helpers/Parser/VNexpressParser.php",
             "App/Models/Article.php",
-            "App/Helpers/Parser/ParserFactory.php"
+            "App/Helpers/Parser/ParserFactory.php",
+            "App/Helpers/Facade/Facade.php"
         ]
     }
 }

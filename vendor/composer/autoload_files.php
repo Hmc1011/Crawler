@@ -18,4 +18,5 @@ return array(
     '73378c40ea2bb055366ec88133975a89' => $baseDir . '/App/Helpers/Parser/VNexpressParser.php',
     '615e2a9989b2f7d7c06c14eee8104b43' => $baseDir . '/App/Models/Article.php',
     '640e153a810432a508d44b8301d26b42' => $baseDir . '/App/Helpers/Parser/ParserFactory.php',
+    '193b18e4020ed438103313856ce29336' => $baseDir . '/App/Helpers/Facade/Facade.php',
 );

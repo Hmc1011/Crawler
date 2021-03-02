@@ -13,7 +13,7 @@ class VNexpressParser extends Parser{
     function __construct($url)
     {
         //get the Html content of given url
-        $this->content= (new Curl\Curl($url))->getHtml() ; 
+        $this->content=  Facade::getHtmlByCurl($url);
         foreach ($this->att as $key=>$value )
             $this->{$key}=$value;
     }
