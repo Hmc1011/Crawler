@@ -2,20 +2,22 @@
 /*
 Table Article contains all the stored articles
 */
+
+
 class Article
 {
-    private $conn;    
+    private $conn;
     function __construct($servername, $username, $password, $dbname)
     {
 
         // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        };
-        echo "Connect success";
-        $this->conn = $conn;
+        try{
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            $this->conn = $conn;
+        }
+        catch (Exception $e){
+            throw new Exception();
+        }
     }
     function store($date, $title, $content, $table)
     {
@@ -28,25 +30,31 @@ class Article
         VALUES ('$date','$title','$content')";
 
         if ($this->conn->query($sql) === TRUE) {
-            echo "New record created successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . $this->conn->error;
+            throw new Exception($this->conn->error);
         }
     }
     function getAllArticle()
     {
-        $outResult=[];
-        $sql = "SELECT `id`,`title`,`date`,`content` FROM `article`";
-        $result = $this->conn->query($sql);
+        try{
 
+            $outResult = [];
+            $sql = "SELECT `id`,`title`,`date`,`content` FROM `article`";
+        $result = $this->conn->query($sql);
+        
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
-    $outResult[]= ['id'=>$row['id'], 'title'=>$row['title'], 'date'=>$row['date'],'content'=>$row['content']];
+                $outResult[] = ['id' => $row['id'], 'title' => $row['title'], 'date' => $row['date'], 'content' => $row['content']];
             }
         }
+         }
+          catch (Exception $e){
+              throw new Exception('Can get all articles');
+          }
         return $outResult;
     }
+
     function __destruct()
     {
         $this->conn->close();

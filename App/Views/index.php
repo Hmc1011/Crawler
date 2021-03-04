@@ -23,9 +23,12 @@
 
 
     <?php
-        echo "<h1 style='color:blue;'> Title: " . IndexController::$title . ' </h1> <br>';
-        echo "<b style='color:red'> Date: </b>" . IndexController::$date . '<br>' ;
-        echo "<b style='color:red'> Content: </b>" . IndexController::$content ;
+        if  (!empty(IndexController::$error)) echo "<h1>".IndexController::$error."</h1>";
+        {
+            echo "<h1 style='color:blue;'> Title: " . IndexController::$title . ' </h1> <br>';
+            echo "<b style='color:red'> Date: </b>" . IndexController::$date . '<br>' ;
+            echo "<b style='color:red'> Content: </b>" . IndexController::$content ;
+        }
 
     ?>
 

@@ -2,26 +2,27 @@
 
 use Mockery\Adapter\Phpunit\MockeryTestCase;
 
-class DanTriParserTest extends MockeryTestCase
+class VNexpressParserTest extends MockeryTestCase
     {
         function dataTitle()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['as----d','']
+                    'special url'=>['"as----d"','']
         ];
         }
         /**
          * @dataProvider dataTitle
          */
         function testDantriParserGetTitle($url,$expect){
-            $danTriParser = new DantriParser($url);
+            $danTriParser = new VNexpressParser($url);
             $title=    $danTriParser->getTitle();
             $this->assertEquals($expect,$title);
         }
+
         function dataContent()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['as----d','']
+                    'special url'=>['"as----d"','']
         ];
         }
         /**
@@ -29,23 +30,24 @@ class DanTriParserTest extends MockeryTestCase
          */
 
         function testDantriParserGetContent($url,$expect){
-            $danTriParser = new DantriParser($url);
+            $danTriParser = new VNexpressParser($url);
             $content=    $danTriParser->getContent();
             $this->assertEquals($expect,$content);
         }
 
-    function dataDate()
+
+        function dataDate()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['as----d','']
+                    'special url'=>['"as----d"','']
         ];
         }
-          /**
+        /**
          * @dataProvider dataDate
          */
         
         function testDantriParserGetDate($url,$expect){
-            $danTriParser = new DantriParser($url);
+            $danTriParser = new VnexpressParser($url);
             $date=    $danTriParser->getDate();
             $this->assertEquals($expect,$date);
         }

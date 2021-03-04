@@ -17,7 +17,8 @@
 
 
     <?php
-    
+    if  (!empty(ShowController::$error)) echo "<h1>".ShowController::$error."</h1>";
+    else
     foreach (ShowController::$allArticle as $item)
     {
     ?>
