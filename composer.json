@@ -13,5 +13,9 @@
             "App/Helpers/Parser/ParserFactory.php",
             "App/Helpers/Facade/Facade.php"
         ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "mockery/mockery": "^1.4"
     }
 }

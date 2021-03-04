@@ -1,4 +1,6 @@
 <?php
+
+
 class ParserFactory
 {
     //Each domain has a corresponding class to retrieve data
@@ -9,9 +11,9 @@ class ParserFactory
         ];
     static function getParserInstance($domain,$url)
     {
-        
-        return new self::$domainToClass[$domain]($url);
-
+            if  (isset( self::$domainToClass[$domain])) 
+            return new self::$domainToClass[$domain]($url);
+            return "";
     }
 
 
