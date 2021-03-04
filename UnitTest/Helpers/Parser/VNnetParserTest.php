@@ -13,9 +13,9 @@ class VNnetParserTest extends MockeryTestCase
         /**
          * @dataProvider dataTitle
          */
-        function testDantriParserGetTitle($url,$expect){
-            $danTriParser = new VietNamNetParser($url);
-            $title=    $danTriParser->getTitle();
+        function testVNnetParserGetTitle($url,$expect){
+            $VNnetParser = new VietNamNetParser($url);
+            $title=    $VNnetParser->getTitle();
             $this->assertEquals($expect,$title);
         }
         function dataContent()
@@ -28,9 +28,9 @@ class VNnetParserTest extends MockeryTestCase
          * @dataProvider dataContent
          */
 
-        function testDantriParserGetContent($url,$expect){
-            $danTriParser = new VietNamNetParser($url);
-            $content=    $danTriParser->getContent();
+        function testVNnetParserGetContent($url,$expect){
+            $VNnetParser = new VietNamNetParser($url);
+            $content=    $VNnetParser->getContent();
             $this->assertEquals($expect,$content);
         }
 
@@ -44,9 +44,9 @@ class VNnetParserTest extends MockeryTestCase
          * @dataProvider dataDate
          */
         
-        function testDantriParserGetDate($url,$expect){
-            $danTriParser = new  VietNamNetParser($url);
-            $date=    $danTriParser->getDate();
+        function testVNnetParserGetDate($url,$expect){
+            $VNnetParser = new  VietNamNetParser($url);
+            $date=    $VNnetParser->getDate();
             $this->assertEquals($expect,$date);
         }
        

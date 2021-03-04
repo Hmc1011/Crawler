@@ -13,9 +13,9 @@ class VNexpressParserTest extends MockeryTestCase
         /**
          * @dataProvider dataTitle
          */
-        function testDantriParserGetTitle($url,$expect){
-            $danTriParser = new VNexpressParser($url);
-            $title=    $danTriParser->getTitle();
+        function testVNexpressParserGetTitle($url,$expect){
+            $VNexpressParser = new VNexpressParser($url);
+            $title=    $VNexpressParser->getTitle();
             $this->assertEquals($expect,$title);
         }
 
@@ -29,9 +29,9 @@ class VNexpressParserTest extends MockeryTestCase
          * @dataProvider dataContent
          */
 
-        function testDantriParserGetContent($url,$expect){
-            $danTriParser = new VNexpressParser($url);
-            $content=    $danTriParser->getContent();
+        function testVNexpressParserGetContent($url,$expect){
+            $VNexpressParser = new VNexpressParser($url);
+            $content=    $VNexpressParser->getContent();
             $this->assertEquals($expect,$content);
         }
 
@@ -46,9 +46,9 @@ class VNexpressParserTest extends MockeryTestCase
          * @dataProvider dataDate
          */
         
-        function testDantriParserGetDate($url,$expect){
-            $danTriParser = new VnexpressParser($url);
-            $date=    $danTriParser->getDate();
+        function testVNexpressParserGetDate($url,$expect){
+            $VNexpressParser = new VnexpressParser($url);
+            $date=    $VNexpressParser->getDate();
             $this->assertEquals($expect,$date);
         }
        
