@@ -8,10 +8,24 @@ class ArticleTest extends TestCase
 
     function setUp():void
     {
-        $this->servername = 'servername';
-        $this->username = "username";
-        $this->password = "password";
-        $this->dbname = "dbname";
+        $this->servername = 'localhost';
+        $this->username = "root";
+        $this->password = "Hoangminhc0ng@1";
+        $this->dbname = "task";
+    }
+    function correctInfoDatabase(){
+        return [
+            ['localhost','root','Hoangminhc0ng@1','task1']
+        ];
+    }
+    /**
+     * @dataProvider correctInfoDatabase
+     */
+    function testContructWithCorrectInfo($servername,$username,$password,$dbname)
+    {
+        $this->addToAssertionCount(1);
+        $ar= new Article($servername,$username,$password,$dbname); 
+        $this->assertTrue(true);
     }
     function testContructWithFailInfo()
     {

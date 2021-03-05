@@ -7,7 +7,9 @@ class VNexpressParserTest extends MockeryTestCase
         function dataTitle()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['"as----d"','']
+                    'special url'=>['"as----d"',''],
+                    'correct url'=>['https://vnexpress.net/ngay-8-3-bat-dau-tiem-vaccine-covid-19-tai-viet-nam-4243903.html','Ngày 8/3 bắt đầu tiêm vaccine Covid-19 tại Việt Nam']
+
         ];
         }
         /**
@@ -15,14 +17,14 @@ class VNexpressParserTest extends MockeryTestCase
          */
         function testVNexpressParserGetTitle($url,$expect){
             $VNexpressParser = new VNexpressParser($url);
-            $title=    $VNexpressParser->getTitle();
+            $title= trim(preg_replace(['/\n/','/\r/','/\t/','/\f/'],'',$VNexpressParser->getTitle()));
             $this->assertEquals($expect,$title);
         }
 
         function dataContent()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['"as----d"','']
+                    'special url'=>['"as----d"',''],
         ];
         }
         /**
@@ -31,7 +33,7 @@ class VNexpressParserTest extends MockeryTestCase
 
         function testVNexpressParserGetContent($url,$expect){
             $VNexpressParser = new VNexpressParser($url);
-            $content=    $VNexpressParser->getContent();
+            $content= trim(preg_replace(['/\n/','/\r/','/\t/','/\f/'],'',$VNexpressParser->getContent()));
             $this->assertEquals($expect,$content);
         }
 
@@ -39,7 +41,8 @@ class VNexpressParserTest extends MockeryTestCase
         function dataDate()
         {
             return ['empty url'=>[' ',''],
-                    'special url'=>['"as----d"','']
+                    'special url'=>['"as----d"',''],
+                    'correct url'=>['https://vnexpress.net/ngay-8-3-bat-dau-tiem-vaccine-covid-19-tai-viet-nam-4243903.html','Thứ sáu, 5/3/2021, 10:52 (GMT+7)']
         ];
         }
         /**
@@ -48,7 +51,7 @@ class VNexpressParserTest extends MockeryTestCase
         
         function testVNexpressParserGetDate($url,$expect){
             $VNexpressParser = new VnexpressParser($url);
-            $date=    $VNexpressParser->getDate();
+            $date= trim(preg_replace(['/\n/','/\r/','/\t/','/\f/'],'',$VNexpressParser->getDate()));
             $this->assertEquals($expect,$date);
         }
        
